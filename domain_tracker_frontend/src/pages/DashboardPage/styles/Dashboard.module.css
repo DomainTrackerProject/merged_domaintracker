@@ -1,0 +1,72 @@
+.pageContainer {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+.pageTitle {
+  text-align: start;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #1976d2;
+  font-size: 2rem;
+}
+
+/* Kart ortak stilleri */
+.card {
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* İçerik bölmeleri */
+.contentBox,
+.chartBox,
+.listContainer {
+  padding: 16px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .pageContainer {
+    padding: 30px 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pageTitle {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageContainer {
+    padding: 20px 12px;
+  }
+
+  .pageTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContainer {
+    padding: 16px 8px;
+  }
+
+  .pageTitle {
+    font-size: 1.1rem;
+  }
+}

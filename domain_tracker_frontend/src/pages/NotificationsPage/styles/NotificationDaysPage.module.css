@@ -1,0 +1,99 @@
+/* Genel Container Ayarları */
+.container {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Başlık */
+.title {
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Yükleniyor Spinnerı */
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Card */
+.card {
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste Elemanları */
+.listItem {
+  background-color: #f5f7fa;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.listItem:hover {
+  background-color: #e8f0fe;
+}
+
+/* Boş Liste Mesajı */
+.emptyText {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Responsive TASARIM */
+
+/* Tablet ve Küçük Ekranlar */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .listItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Telefon Ekranları */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .listItem {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .emptyText {
+    font-size: 0.95rem;
+  }
+}

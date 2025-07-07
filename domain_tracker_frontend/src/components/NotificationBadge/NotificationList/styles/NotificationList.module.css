@@ -1,0 +1,46 @@
+.wrapper {
+    margin-top: 24px;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .filterInput {
+    margin-bottom: 20px;
+  }
+  
+  .sortControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .sortTags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .list {
+    max-height: 70vh;
+    overflow-y: auto;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .sortControls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .sortTags {
+      justify-content: flex-start;
+    }
+  }
+  

@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./domain_tracker
+      dockerfile: Dockerfile.backend
+    container_name: domain_tracker_backend
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./domain_tracker:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./domain_tracker/.env
+    depends_on:
+      - db
+      - redis
+
+  celery:
+    build:
+      context: ./domain_tracker
+      dockerfile: Dockerfile.backend
+    container_name: domain_tracker_celery
+    command: celery -A celery_app worker --loglevel=info
+    volumes:
+      - ./domain_tracker:/app
+    env_file:
+      - ./domain_tracker/.env
+    depends_on:
+      - db
+      - redis
+
+  
+  celery-beat:
+    build:
+      context: ./domain_tracker
+      dockerfile: Dockerfile.backend
+    container_name: domain_tracker_beat
+    command: celery -A celery_app beat --loglevel=info
+    volumes:
+      - ./domain_tracker:/app
+    env_file:
+      - ./domain_tracker/.env
+    depends_on:
+      - db
+      - redis
+
+   
+  db:
+    image: postgres:14
+    container_name: domain_tracker_db
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: domain_tracker_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7.2
+    container_name: domain_tracker_redis
+    ports:
+      - "6379:6379"
+
+  frontend:
+    build:
+      context: ./domain_tracker_frontend
+      dockerfile: Dockerfile.frontend
+    container_name: domain_tracker_frontend
+    ports:
+      - "5173:80"
+    restart: always
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

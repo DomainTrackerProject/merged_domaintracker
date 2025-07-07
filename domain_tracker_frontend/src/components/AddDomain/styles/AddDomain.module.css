@@ -1,0 +1,157 @@
+/* Genel Form Konteyneri */
+
+:global(.MuiPickersArrowSwitcher-root) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 12px;
+}
+
+:global(.MuiPickersArrowSwitcher-button) {
+  color: #1565c0;
+  opacity: 1 !important;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+:global(.MuiPickersArrowSwitcher-button.Mui-disabled) {
+  color: #c1c1c1 !important;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+:global(.MuiPickersArrowSwitcher-button:not(.Mui-disabled):hover) {
+  transform: scale(1.2);
+  color: #0d47a1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  min-width: 300px; /* Mobil cihazlar için düşürüldü */
+  box-sizing: border-box;
+}
+
+/* Input Alanları */
+.input {
+  width: 100%;
+  height: 52px;
+  font-size: 16px;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border: 1px solid #1565c0;
+  box-shadow: 0px 0px 10px rgba(21, 101, 192, 0.3);
+  outline: none;
+}
+
+/* Takvim İkonu */
+.calendarIcon {
+  color: #1565c0;
+  transition: color 0.3s ease;
+}
+
+.calendarIcon:hover {
+  color: #0d47a1;
+}
+
+/* Butonlar */
+.button {
+  width: 100%;
+  height: 52px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+/* "Ekle" Butonu */
+.button.primary {
+  background-color: #1565c0;
+  color: white;
+}
+
+.button.primary:hover {
+  background-color: #0d47a1;
+  transform: scale(1.03);
+}
+
+/* "İptal" Butonu */
+.button.secondary {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.button.secondary:hover {
+  background-color: #b71c1c;
+  transform: scale(1.03);
+}
+
+/* Genel Responsive Kurallar */
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+    gap: 16px;
+    max-width: 90%;
+  }
+
+  .input,
+  .button {
+    font-size: 15px;
+    height: 48px;
+  }
+
+  .calendarIcon {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .input,
+  .button {
+    font-size: 14px;
+    height: 44px;
+  }
+
+  .calendarIcon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .form {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .input,
+  .button {
+    font-size: 13px;
+    height: 42px;
+  }
+
+  .calendarIcon {
+    font-size: 18px;
+  }
+}

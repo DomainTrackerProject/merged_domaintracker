@@ -1,0 +1,15 @@
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.alert {
+  margin-bottom: 16px;
+}
+
+.submitButton {
+  margin-top: 20px;
+}

@@ -1,0 +1,43 @@
+/* Ana düzen */
+.registerMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f4f6f8;
+  box-sizing: border-box;
+}
+
+/* Konteyner */
+.registerContainer {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  padding: 32px 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Başlık ve ikon */
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #1976d2;
+}
+
+/* Responsive için küçük ekran desteği */
+@media (max-width: 480px) {
+  .registerContainer {
+    padding: 24px 16px;
+  }
+}

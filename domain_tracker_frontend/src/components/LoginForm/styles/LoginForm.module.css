@@ -1,0 +1,103 @@
+/* Genel Konteyner */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/* Form Kutusu */
+.formBox {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: start;
+}
+
+/* Başlık */
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #1976d2;
+  margin-bottom: 8px;
+}
+
+/* Alt Başlık */
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+/* Hata Mesajı */
+.errorMessage {
+  color: #d32f2f;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Beni Hatırla ve Şifremi Unuttum Alanı */
+.rememberForgotContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+/* Linkler */
+.link {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Gönderme Butonu */
+.submitButton {
+  width: 100%;
+  max-width: 350px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submitButton:hover {
+  background-color: #1565c0;
+  transform: scale(1.02);
+}
+
+/* Alt Kayıt Metni */
+.registerText {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}

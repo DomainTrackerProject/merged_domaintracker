@@ -1,0 +1,36 @@
+.dashboardCard {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dashboardCard:hover {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardIcon {
+  font-size: 40px;
+  color: #1976d2;
+}
+
+.cardTitle {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.cardValue {
+  color: #0d47a1;
+  font-size: 2rem;
+  font-weight: 700;
+}

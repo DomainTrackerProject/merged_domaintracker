@@ -1,0 +1,125 @@
+.tableContainer {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow-x: auto;
+  width: 100%; /* Ensure the table takes full width */
+}
+
+.headerRow {
+  background-color: #1976d2;
+}
+
+.headerCell {
+  color: white !important;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  gap: 4px;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+.tableRow:hover {
+  background-color: #e3f2fd;
+}
+
+.tableCellButton {
+  text-align: center;
+}
+
+.tableCellButton button {
+  background-color: #1976d2;
+  color: white;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.tableCellButton button:hover {
+  background-color: #1565c0;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .tableContainer {
+    font-size: 15px;
+  }
+
+  .headerCell {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    font-size: 14px;
+  }
+
+  .headerCell {
+    font-size: 13px;
+  }
+
+  .tableRow td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .tableCellButton button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableContainer {
+    font-size: 13px;
+  }
+
+  .headerCell {
+    font-size: 12px;
+  }
+
+  .tableRow td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .tableCellButton button {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+/* For very small screens (below 360px, down to 300px) */
+@media (max-width: 360px) {
+  .tableContainer {
+    font-size: 12px; /* Slightly smaller font */
+  }
+
+  .headerCell {
+    font-size: 11px; /* Reduce header font */
+    flex-direction: column; /* Stack the header content vertically */
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .tableRow td {
+    font-size: 11px; /* Smaller font for cells */
+    padding: 6px; /* Adjust padding to fit better */
+  }
+
+  .tableCellButton button {
+    font-size: 10px; /* Even smaller button font */
+    padding: 3px 6px; /* Smaller padding */
+  }
+}

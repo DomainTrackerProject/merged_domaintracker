@@ -1,0 +1,64 @@
+/* Sayfa Genel Konteyneri */
+.pageContainer {
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Sayfa Başlığı */
+.pageTitle {
+  text-align: start;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1976d2;
+}
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.verticalButtons  {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 32px;    
+  margin-bottom: 16px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: stretch;
+}
+
+.actionButton {
+  height: 35px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start; 
+  margin-bottom: 16px;
+}
+
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 16px;
+  }
+
+  .pageTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}

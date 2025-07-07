@@ -1,0 +1,15 @@
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-color: #90caf9; /* hover'da hafif mavi çerçeve */
+    cursor: pointer;
+  }
+  

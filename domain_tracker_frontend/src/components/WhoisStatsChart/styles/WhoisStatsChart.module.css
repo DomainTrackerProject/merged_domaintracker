@@ -1,0 +1,62 @@
+.chartContainer {
+  width: 100%;
+  max-width: 500px;
+  min-width: 320px; /* Prevent shrinking below a reasonable size */
+  margin: auto;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+  .chartContainer {
+    padding: 12px;
+    max-width: 100%;
+    min-width: 320px; /* Ensure it doesn't shrink below 320px */
+  }
+
+  .chartContainer h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartContainer {
+    padding: 10px;
+    max-width: 100%;
+    min-width: 320px; /* Ensure it doesn't shrink below 320px */
+  }
+
+  .chartContainer h3 {
+    font-size: 1rem;
+  }
+}
+
+/* After 480px width, prevent further shrinking */
+@media (max-width: 480px) {
+  .chartContainer {
+    padding: 10px;
+    max-width: 100%;
+    min-width: 320px; /* Lock at 320px, no further shrinking */
+  }
+
+  .chartContainer h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  .chartContainer {
+    padding: 10px;
+    max-width: 100%;
+    min-width: 320px; /* Lock at 320px, no further shrinking */
+  }
+
+  .chartContainer h3 {
+    font-size: 1rem;
+  }
+}
